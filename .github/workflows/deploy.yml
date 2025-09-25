@@ -1,0 +1,36 @@
+name: Deploy Static MyResale placeholder site to DO Droplet
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_MYRESALE_PLACEHOLDER }}
+
+      - name: Add droplet host to known_hosts
+        run: |
+          ssh-keyscan -H ${{ secrets.SSH_HOST_MYRESALE_PLACEHOLDER }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to Droplet
+        run: |
+          rsync -avz --exclude='.git' ./ \
+            ${{ secrets.SSH_USERNAME_MYRESALE_PLACEHOLDER }}@${{ secrets.SSH_HOST_MYRESALE_PLACEHOLDER }}:/mnt/klaimr_dev_volume_sgp1_01/myresale_ph
+
+          ssh ${{ secrets.SSH_USERNAME_MYRESALE_PLACEHOLDER }}@${{ secrets.SSH_HOST_MYRESALE_PLACEHOLDER }} << 'EOF'
+            cd /mnt/klaimr_dev_volume_sgp1_01/myresale_ph
+            docker build -t myresale-placeholder .
+            docker stop myresale-placeholder || true
+            docker rm myresale-placeholder || true
+            docker run -d --name myresale-placeholder -p 8083:80 myresale-placeholder
+          EOF
