@@ -1,49 +1,303 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Situs Sedang Dibangun</title>
-  <style>
-    /*
-     * Under Construction Placeholder
-     * Follows Brand Style Guide:
-     * - Primary: Bright Orange (#F15A29)
-     * - Secondary: Teal Blue (#3FBFBF)
-     * - Neutrals: Charcoal Gray (#2E2E2E), Light Gray (#F5F5F5)
-     */
-
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: sans-serif;
-      background: url("images/building-landscape.webp") no-repeat center center;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #2E2E2E; /* Charcoal Gray */
-    }
-
-    @media (max-width: 768px) {
-      body {
-        background-image: url("images/building-portrait.webp");
-      }
-    }
-
-    h1 {
-      font-size: 2rem;
-      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6), 
-                   -1px -1px 2px rgba(0, 0, 0, 0.4); /* subtle dual shadow */
-      background-color: rgba(245, 245, 245, 0.7); /* Light Gray w/ transparency */
-      padding: 1rem 2rem;
-      border-radius: 8px;
-    }
-  </style>
+  <title>MyResale</title>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-  <h1>Kami sedang membangun sesuatu yang hebat!</h1>
+  <header class="site-header">
+    <div class="header-content">
+      <a href="/" title="MyResale Home">
+        <div class="placeholder logo">[Logo Placeholder]</div>
+      </a>
+      <div class="auth-links">
+        <a href="#login">Masuk</a>
+        <span>|</span>
+        <a href="#signup">Daftar Gratis</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-video-placeholder">
+        <div class="placeholder">[Background Media Placeholder - Video/Image Carousel]</div>
+      </div>
+      <div class="hero-content">
+        <h1>Temukan Gaya Unikmu, Jual Kembali Kisahmu.</h1>
+        <p>Platform #1 di Indonesia untuk jual beli barang preloved berkualitas dan aman, langsung dari penjual
+          terpercaya.</p>
+        <div class="signup-options">
+          <form action="#login-fb" method="post">
+            <button type="submit" class="btn-alt-dark"><i class="fab fa-facebook-square"></i> Continue with
+              Facebook</button>
+          </form>
+          <form action="#login-google" method="post">
+            <button type="submit" class="btn-alt-light"><i class="fab fa-google"></i> Continue with Google</button>
+          </form>
+          <form action="#login-apple" method="post">
+            <button type="submit" class="btn-alt-dark"><i class="fab fa-apple"></i> Continue with Apple</button>
+          </form>
+          <a href="#signup-email" class="signup-email">Daftar dengan email kamu</a>
+        </div>
+        <div class="stay-signed-in">
+          <input type="checkbox" id="stay-signed-in" checked>
+          <label for="stay-signed-in">Stay Signed In</label>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <section class="brands-section section-padding">
+        <h2>Toko Pilihan Minggu Ini</h2>
+        <div class="grid">
+          <div class="grid-col-3">
+            <div class="placeholder aspect-ratio-tall">[Brand Image 1]</div>
+            <p>Brand 1</p>
+          </div>
+          <div class="grid-col-3">
+            <div class="placeholder aspect-ratio-tall">[Brand Image 2]</div>
+            <p>Brand 2</p>
+          </div>
+          <div class="grid-col-3">
+            <div class="placeholder aspect-ratio-tall">[Brand Image 3]</div>
+            <p>Brand 3</p>
+          </div>
+          <div class="grid-col-3">
+            <div class="placeholder aspect-ratio-tall">[Brand Image 4]</div>
+            <p>Brand 4</p>
+          </div>
+          <div class="grid-col-3">
+            <div class="placeholder aspect-ratio-tall">[Brand Image 5]</div>
+            <p>Brand 5</p>
+          </div>
+          <div class="grid-col-3">
+            <div class="placeholder aspect-ratio-tall">[Brand Image 6]</div>
+            <p>Brand 6</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <section class="community-section section-padding">
+      <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+        <div class="community-image" style="flex: 1; min-width: 300px;">
+          <div class="placeholder" style="aspect-ratio: 4 / 3;">[Community Image Placeholder]</div>
+          <div style="margin-top: -80px; margin-left: 20px; max-width: 80%; position: relative;">
+            <div class="feed-item">
+              <div class="placeholder placeholder-circle">[User Pic]</div>
+              <div>User X liked Item Y</div>
+            </div>
+            <div class="feed-item">
+              <div class="placeholder placeholder-circle">[User Pic]</div>
+              <div>User Z commented on Item A</div>
+            </div>
+          </div>
+        </div>
+        <div class="community-text" style="flex: 1; min-width: 300px;">
+          <h2>Komunitas untuk Bertumbuh</h2>
+          <p>Bergabung dengan penjual dan pembeli yang terverifikasi, untuk transaksi yang aman dan transparan.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="how-it-works-section section-padding text-center">
+        <h2>Cara Kerjanya</h2>
+        <div class="tabs">
+          <div class="tab active" data-tab="seller">Untuk Penjual</div>
+          <div class="tab" data-tab="buyer">Untuk Pembeli</div>
+          <div class="tab" data-tab="consignor">Untuk Penitip</div>
+        </div>
+
+        <div class="steps seller-steps steps-content active" data-content="seller">
+          <div class="step grid-col-4 grid-col-full-mobile">
+            <div class="placeholder aspect-ratio-square">[List It Image]</div>
+            <h4>Upload Instan AI</h4>
+            <p>Percepat proses upload! Sistem AI akan otomatis menghasilkan detail listing produk tanpa perlu input
+              manual.</p>
+          </div>
+          <div class="step grid-col-4 grid-col-full-mobile">
+            <div class="placeholder aspect-ratio-square">[Share It Image]</div>
+            <h4>Iklan Toko</h4>
+            <p>Pasang iklan untuk mempromosikan toko dan produk kamu di halaman toko lain di MyResale.</p>
+          </div>
+          <div class="step grid-col-4 grid-col-full-mobile">
+            <div class="placeholder aspect-ratio-square">[Earn Cash Image]</div>
+            <h4>Kalkulator Keuntungan</h4>
+            <p>Hitung keuntungan otomatis! Masukkan modal barang dan sistem akan langsung menampilkan laba bersih dari
+              setiap penjualan.</p>
+          </div>
+        </div>
+
+        <div class="steps buyer-steps steps-content" data-content="buyer" style="display: none;">
+          <div class="step grid-col-4 grid-col-full-mobile">
+            <div class="placeholder aspect-ratio-square">[Search Image]</div>
+            <h4>Pencarian Pintar & Filter</h4>
+            <p>Cari barang spesifik dengan mudah. Gunakan filter canggih untuk menyaring berdasarkan kategori, merek,
+              ukuran, dan kondisi.</p>
+          </div>
+          <div class="step grid-col-4 grid-col-full-mobile">
+            <div class="placeholder aspect-ratio-square">[Offer Image]</div>
+            <h4>Tawar Harga</h4>
+            <p>Suka barangnya tapi harganya kurang pas? Ajukan tawaran harga langsung ke penjual dan dapatkan
+              kesepakatan terbaik.</p>
+          </div>
+          <div class="step grid-col-4 grid-col-full-mobile">
+            <div class="placeholder aspect-ratio-square">[Recommend Image]</div>
+            <h4>Rekomendasi Pilihan</h4>
+            <p>Temukan barang yang paling sesuai dengan seleramu. Sistem kami akan memberikan rekomendasi yang
+              dipersonalisasi.</p>
+          </div>
+        </div>
+
+        <div class="steps consignor-steps steps-content" data-content="consignor" style="display: none;">
+          <div class="step grid-col-4 grid-col-full-mobile">
+            <div class="placeholder aspect-ratio-square">[Dashboard Image]</div>
+            <h4>Pantau Status Real-Time</h4>
+            <p>Kelola semua barang yang kamu titipkan ke berbagai toko. Pantau statusnya secara real-time, dari
+              tersedia, terjual, hingga dikembalikan.</p>
+          </div>
+          <div class="step grid-col-4 grid-col-full-mobile">
+            <div class="placeholder aspect-ratio-square">[Commission Image]</div>
+            <h4>Komisi Transparan</h4>
+            <p>Lihat dengan jelas persentase komisi untuk setiap barang yang berhasil terjual melalui toko penitipan.
+            </p>
+          </div>
+          <div class="step grid-col-4 grid-col-full-mobile">
+            <div class="placeholder aspect-ratio-square">[Calendar Image]</div>
+            <h4>Atur Periode Titip</h4>
+            <p>Tentukan sendiri tanggal mulai dan berakhir untuk setiap barang yang kamu titipkan, berikan fleksibilitas
+              penuh atas inventarismu.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="confidence-section section-padding text-center">
+        <h2>Kenapa Pilih MyResale?</h2>
+        <div class="features">
+          <div class="feature grid-col-4 grid-col-full-mobile">
+            <div class="placeholder">[Protected Payments Icon]</div>
+            <h4>Koleksi Terkurasi</h4>
+            <p>Temukan fashion, elektronik, dan barang hobi unik yang dipilih dengan cermat.</p>
+          </div>
+          <div class="feature grid-col-4 grid-col-full-mobile">
+            <div class="placeholder">[Posh Authenticate Icon]</div>
+            <h4>Transaksi Aman</h4>
+            <p>Pembayaran aman, transaksi lancar, tanpa rasa khawatir.</p>
+          </div>
+          <div class="feature grid-col-4 grid-col-full-mobile">
+            <div class="placeholder">[Shipping Icon]</div>
+            <h4>Komunitas Terpercaya</h4>
+            <p>Gabung dengan ribuan pengguna yang punya minat sama dalam jual beli barang berkualitas.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <section class="app-download-section section-padding">
+      <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+        <div class="app-text" style="flex: 1; min-width: 300px;">
+          <div class="placeholder logo">[Logo Placeholder]</div>
+          <h3 style="margin-top: 20px;">Download the app for <strong>free</strong> on iPhone, iPad<br> and Android.</h3>
+          <div class="store-buttons">
+            <div class="placeholder store-icon-placeholder">[App Store Button]</div>
+            <div class="placeholder store-icon-placeholder">[Google Play Button]</div>
+          </div>
+        </div>
+        <div class="app-image" style="flex: 1; min-width: 300px;">
+          <div class="placeholder">[Phone with App Image]</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Shop Categories</h4>
+          <ul>
+            <li><a href="#women">Women</a></li>
+            <li><a href="#men">Men</a></li>
+            <li><a href="#kids">Kids</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#electronics">Electronics</a></li>
+            <li><a href="#pets">Pets</a></li>
+            <li><a href="#handbags">Handbags</a></li>
+            <li><a href="#shoes">Shoes</a></li>
+            <li><a href="#jewelry">Jewelry & Accessories</a></li>
+            <li><a href="#makeup">Makeup</a></li>
+            <li><a href="#dresses">Dresses</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Popular Brands</h4>
+          <ul>
+            <li><a href="#nike">Nike</a></li>
+            <li><a href="#mk">Michael Kors</a></li>
+            <li><a href="#lv">Louis Vuitton</a></li>
+            <li><a href="#lululemon">lululemon athletica</a></li>
+            <li><a href="#pink">PINK Victoria's Secret</a></li>
+            <li><a href="#coach">Coach</a></li>
+            <li><a href="#chanel">Chanel</a></li>
+            <li class="special-link"><a href="#brands">See All Brands »</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#community">Our Community</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#faq">Pusat Bantuan</a></li>
+            <li><a href="#live">Live Shopping</a></li>
+            <li class="special-link"><a href="#sell">Sell on Poshmark</a></li>
+            <li class="special-link"><a href="#how">How it works</a></li>
+            <li><a href="#giftcards">Gift Cards</a></li>
+            <li class="special-link"><a href="#careers">Careers</a></li>
+            <li><a href="#press">Press</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Buy and Sell on App</h4>
+          <div>
+            <div class="placeholder store-icon-placeholder">[App Store Button]</div>
+            <div class="placeholder store-icon-placeholder">[Google Play Button]</div>
+          </div>
+          <h4 style="margin-top: 20px;">Connect With Us</h4>
+          <div class="social-icons">
+            <div class="placeholder">[IG]</div>
+            <div class="placeholder">[TikTok]</div>
+            <div class="placeholder">[TW]</div>
+            <div class="placeholder">[FB]</div>
+            <div class="placeholder">[YT]</div>
+            <div class="placeholder">[PIN]</div>
+          </div>
+          <h4 style="margin-top: 20px;">Shop In</h4>
+          <div class="country-switcher">
+            <div class="placeholder">[Country Selector: United States]</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 MyResale</span>
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#contact">Contact</a>
+        <a href="#optout">Your Opt Out Rights</a>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
