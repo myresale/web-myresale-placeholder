@@ -232,7 +232,7 @@ button,
 }
 
 .site-header .logo {
-    height: 24px;
+    height: 35px;
     /* From original source */
     width: auto;
 }
@@ -632,4 +632,124 @@ button,
     .grid-col-full-mobile {
         width: calc(100% - 20px);
     }
+}
+
+/* --- Testimonial Carousel --- */
+.testimonial-carousel {
+    overflow: hidden;
+    /* Simple mask to hide scrollbar */
+    -webkit-mask-image: linear-gradient(to right,
+            transparent 0,
+            black 5%,
+            black 95%,
+            transparent 100%);
+    mask-image: linear-gradient(to right,
+            transparent 0,
+            black 5%,
+            black 95%,
+            transparent 100%);
+
+    /* --- MODIFIED STYLES --- */
+    position: absolute;
+    /* Take it out of normal flow */
+    bottom: 40px;
+    /* Position it 40px from the bottom (matches hero padding) */
+    left: 0;
+    /* Align to the far left */
+    width: 100%;
+    /* Make it 100% wide */
+    margin-top: 0;
+    /* Remove the old margin */
+}
+
+.carousel-track {
+    display: flex;
+    /* (Card width + margin) * total cards (3 originals + 3 duplicates) */
+    /* (320px + 20px) * 6 = 2040px */
+    width: calc(340px * 6);
+    animation: scroll 30s linear infinite;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Scroll by the width of the original 3 cards */
+        /* (320px + 20px) * 3 = -1020px */
+        transform: translateX(calc(-340px * 3));
+    }
+}
+
+.testimonial-card {
+    width: 320px;
+    margin-right: 20px;
+    flex-shrink: 0;
+
+    /* --- MODIFIED STYLES FOR SHORTER/FLATTER CARD --- */
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slightly less pronounced shadow */
+    color: var(--neutral-dark);
+    border-radius: 6px; /* Slightly smaller border-radius */
+    padding: 8px 12px; /* Reduced vertical padding, slightly more horizontal */
+    border-left: 4px solid var(--primary-color); /* Slightly thinner accent */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack contents vertically */
+    justify-content: space-between; /* Distribute space */
+    min-height: 120px; /* Set a minimum height to ensure consistency, adjust if needed */
+}
+
+.testimonial-card .quote-symbol {
+    font-size: 2.5rem; /* Reduced font size */
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: -8px; /* Adjusted margin */
+}
+
+.testimonial-card .quote-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px; /* Reduced margin */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    flex-grow: 1; /* Allows text to take up available space */
+}
+
+.testimonial-card .user-info {
+    display: flex;
+    align-items: center;
+    margin-top: auto; /* Pushes user-info to the bottom */
+}
+
+.testimonial-card .avatar {
+    width: 38px; /* Smaller avatar */
+    height: 38px; /* Smaller avatar */
+    border-radius: 50%;
+    margin-right: 8px; /* Reduced margin */
+    object-fit: cover;
+    background-color: var(--placeholder-bg);
+}
+
+.testimonial-card .user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card .user-name {
+    font-weight: 700;
+    color: var(--neutral-dark);
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+.testimonial-card .user-handle {
+    font-size: 0.8rem; /* Smaller handle font size */
+    color: #777;
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyResale</title>
+  <title>MyResale: Satu link bisa untuk semua cerita preloved kamu</title>
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,41 +14,100 @@
   <header class="site-header">
     <div class="header-content">
       <a href="/" title="MyResale Home">
-        <div class="placeholder logo">[Logo Placeholder]</div>
+        <picture>
+          <source srcset="images/logo-h.webp" media="(min-width: 768px)">
+          <img src="images/logo.webp" alt="MyResale Logo" class="logo">
+        </picture>
       </a>
       <div class="auth-links">
-        <a href="#login">Masuk</a>
-        <span>|</span>
-        <a href="#signup">Daftar Gratis</a>
+        <a href="#signup">Gabung Sekarang!</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero-section">
-      <div class="hero-video-placeholder">
-        <div class="placeholder">[Background Media Placeholder - Video/Image Carousel]</div>
-      </div>
+    <section class="hero-section"
+      style="background-image: url('images/hero-store-front.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
       <div class="hero-content">
-        <h1>Temukan Gaya Unikmu, Jual Kembali Kisahmu.</h1>
+        <h1>Barang yang Sempat Kamu Sayang, Jangan Dibuang</h1>
         <p>Platform #1 di Indonesia untuk jual beli barang preloved berkualitas dan aman, langsung dari penjual
           terpercaya.</p>
-        <div class="signup-options">
-          <form action="#login-fb" method="post">
-            <button type="submit" class="btn-alt-dark"><i class="fab fa-facebook-square"></i> Continue with
-              Facebook</button>
-          </form>
-          <form action="#login-google" method="post">
-            <button type="submit" class="btn-alt-light"><i class="fab fa-google"></i> Continue with Google</button>
-          </form>
-          <form action="#login-apple" method="post">
-            <button type="submit" class="btn-alt-dark"><i class="fab fa-apple"></i> Continue with Apple</button>
-          </form>
-          <a href="#signup-email" class="signup-email">Daftar dengan email kamu</a>
-        </div>
-        <div class="stay-signed-in">
-          <input type="checkbox" id="stay-signed-in" checked>
-          <label for="stay-signed-in">Stay Signed In</label>
+      </div>
+      <div class="testimonial-carousel">
+        <div class="carousel-track">
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Dulu saya butuh waktu lebih dari sejam untuk rekap setelah setiap
+              sesi live. Melelahkan sekali."</p>
+            <div class="user-info">
+              <img src="images/avatar-adinda.webp" alt="Adinda S." class="avatar">
+              <div class="user-details">
+                <span class="user-name">Adinda S.</span>
+                <span class="user-handle">@thisiscimx</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Fitur kalkulator keuntungannya bener-bener game-changer! Harga jual lebih cepat dan
+              transparan."</p>
+            <div class="user-info">
+              <img src="images/avatar-budi.webp" alt="Budi R." class="avatar">
+              <div class="user-details">
+                <span class="user-name">Budi R.</span>
+                <span class="user-handle">@tokobudijaya</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Sistem titip di MyResale aman banget. Saya real-time tanpa was-was."</p>
+            <div class="user-info">
+              <img src="images/avatar-citra.webp" alt="Citra L." class="avatar">
+              <div class="user-details">
+                <span class="user-name">Citra L.</span>
+                <span class="user-handle">@citraluxpreloved</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Dulu saya butuh waktu lebih dari sejam. Semuanya secara manual di catatan HP.
+              Melelahkan sekali."</p>
+            <div class="user-info">
+              <img src="images/avatar-adinda.webp" alt="Adinda S." class="avatar">
+              <div class="user-details">
+                <span class="user-name">Adinda S.</span>
+                <span class="user-handle">@thisiscimx</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Fitur kalkulator keuntungannya bener-bener game-changer! Harga jual lebih cepat dan
+              transparan."</p>
+            <div class="user-info">
+              <img src="images/avatar-budi.webp" alt="Budi R." class="avatar">
+              <div class="user-details">
+                <span class="user-name">Budi R.</span>
+                <span class="user-handle">@tokobudijaya</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Sistem titip (consign) di MyResale aman banget. Saya bisa pantau
+              status barang
+              saya real-time tanpa was-was."</p>
+            <div class="user-info">
+              <img src="images/avatar-citra.webp" alt="Citra L." class="avatar">
+              <div class="user-details">
+                <span class="user-name">Citra L.</span>
+                <span class="user-handle">@citraluxpreloved</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -102,7 +161,7 @@
           </div>
         </div>
         <div class="community-text" style="flex: 1; min-width: 300px;">
-          <h2>Komunitas untuk Bertumbuh</h2>
+          <h2>Bertumbuh bersama penjual lainnya, hanya di MyResale</h2>
           <p>Bergabung dengan penjual dan pembeli yang terverifikasi, untuk transaksi yang aman dan transparan.</p>
         </div>
       </div>
@@ -120,7 +179,7 @@
         <div class="steps seller-steps steps-content active" data-content="seller">
           <div class="step grid-col-4 grid-col-full-mobile">
             <div class="placeholder aspect-ratio-square">[List It Image]</div>
-            <h4>Upload Instan AI</h4>
+            <h4>Kamu bisa upload produk kamu sekaligus loh!</h4>
             <p>Percepat proses upload! Sistem AI akan otomatis menghasilkan detail listing produk tanpa perlu input
               manual.</p>
           </div>
