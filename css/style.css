@@ -290,72 +290,192 @@ button,
     color: #ccc;
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section (Responsive Optimized) --- */
 .hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--placeholder-bg);
-    color: white;
-    min-height: 70vh;
-    position: relative;
-    padding: 40px;
-    margin-bottom: 0;
-    /* Removed margin */
-    text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  min-height: 90vh;
+  position: relative;
+  padding: 80px 5%;
+  text-align: left;
+  overflow: hidden;
 }
 
+/* Gradient overlay for text contrast */
 .hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.03) 63%);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.3) 45%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
 }
 
 .hero-section .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 650px;
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  
+  /* --- NEW: Accent Border --- */
+  border-left: 4px solid var(--primary-color);
+  padding-left: 25px;
+  transition: padding 0.3s ease, border 0.3s ease;
 }
 
+/* --- NEW: Eyebrow Color --- */
+.hero-section .eyebrow {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--secondary-color); /* <-- Teal color */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+/* Headings and text */
 .hero-section h1 {
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
 
-.hero-section .hero-content .eyebrow {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--secondary-color);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
+.hero-section .subheadline {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  line-height: 1.5;
 }
 
-.hero-section .hero-content .subheadline {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-    color: rgba(255, 255, 255, 0.9);
+/* CTA Buttons */
+.hero-section .hero-cta {
+  margin-bottom: 20px;
 }
 
-.hero-section .hero-content .hero-cta {
-    margin-bottom: 15px;
+.hero-section .hero-cta .btn {
+  margin-right: 10px;
+  font-weight: 600;
 }
 
-.hero-section .hero-content .hero-cta .btn {
-    margin-right: 10px;
-    font-weight: 500;
+/* --- NEW: Secondary Button Style --- */
+/* This ensures your "Lihat Cara Kerja" button matches */
+.btn-secondary-outline {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+.btn-secondary-outline:hover {
+  background-color: var(--secondary-color); /* <-- Teal on hover */
+  border-color: var(--secondary-color);
+  text-decoration: none;
 }
 
-.hero-section .hero-content .notes {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-    font-style: italic;
+
+/* Notes or tagline */
+.hero-section .notes {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+}
+
+/* --- Responsive Adjustments --- */
+
+/* Tablet (landscape and portrait) */
+@media (max-width: 1024px) {
+  .hero-section {
+    justify-content: center;
+    text-align: center;
+    padding: 60px 40px;
+  }
+
+  .hero-section::before {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+  }
+
+  .hero-section .hero-content {
+    max-width: 90%;
+    
+    /* --- NEW: Remove accent border on mobile --- */
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-section .subheadline {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile (phones) - OPTIMIZED & MERGED BLOCK */
+@media (max-width: 600px) {
+  .hero-section {
+    min-height: 80vh;
+    padding: 60px 25px;
+    background-position: center top;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-section::before {
+    background: rgba(0, 0, 0, 0.5); /* simpler overlay for clarity */
+  }
+
+  .hero-section .hero-content {
+    max-width: 100%;
+    margin: 0 auto;
+    border-left: none; /* Already covered, but good for safety */
+    padding-left: 0;   /* Already covered, but good for safety */
+  }
+  
+  .hero-section h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .hero-section .subheadline {
+    font-size: 1rem;
+  }
+
+  /* Center the buttons */
+  .hero-section .hero-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .hero-section .hero-cta .btn {
+    margin: 0;
+    width: 80%;
+    max-width: 280px;
+  }
+
+  .hero-section .notes {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 10px;
+  }
 }
 
 /* --- Problem Section (Animated Split Reveal) --- */
@@ -906,62 +1026,124 @@ button,
 
 /* --- Footer --- */
 .site-footer {
-    background-color: var(--footer-background);
-    padding: 40px 0 20px 0;
-    border-top: 1px solid #e0e0e0;
-    margin-top: 0;
-    font-size: 0.9rem;
+  background-color: #121212; /* Dark, elegant tone */
+  color: #eee;
+  padding: 60px 0 30px 0;
+  font-size: 0.95rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional gradient accent line */
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
 }
 
 .site-footer .footer-content.simple {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+}
+
+.site-footer .footer-tagline img {
+  height: 35px;
+  margin-bottom: 15px;
 }
 
 .site-footer .footer-tagline p {
-    color: #666;
-    margin-top: 5px;
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 350px;
+}
+
+/* Social Section */
+.site-footer .footer-social {
+  text-align: right;
 }
 
 .site-footer .footer-social h4 {
-    margin-bottom: 10px;
-    text-align: left;
+  color: var(--secondary-color); /* --- MODIFIED --- */
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.site-footer .social-icons .placeholder {
-    width: 32px;
-    height: 32px;
-    background-color: #aaa;
-    color: white;
-    border-radius: 50%;
-    text-decoration: none;
-    display: inline-flex;
-    /* Use flex for alignment */
-    align-items: center;
-    justify-content: center;
-    margin-right: 8px;
-    border: none;
+.site-footer .social-icons a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
 }
 
-.site-footer .social-icons a:hover.placeholder {
-    background-color: var(--primary-color);
+/* --- MODIFIED: Shared hover transform --- */
+.site-footer .social-icons a:hover {
+  transform: translateY(-3px);
 }
 
+/* --- NEW: Alternating hover colors --- */
+.site-footer .social-icons a:nth-child(odd):hover {
+  background-color: var(--primary-color); /* Orange */
+}
+.site-footer .social-icons a:nth-child(even):hover {
+  background-color: var(--secondary-color); /* Teal */
+}
+
+/* Footer bottom bar */
 .site-footer .footer-bottom {
-    border-top: 1px solid #e0e0e0;
-    margin-top: 30px;
-    padding-top: 20px;
-    text-align: center;
-    color: #666;
-    font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.85rem;
 }
 
 .site-footer .footer-bottom a {
-    color: #555;
-    margin: 0 10px;
+  color: #ddd;
+  margin: 0 12px;
+  transition: color 0.2s ease;
+}
+
+.site-footer .footer-bottom a:hover {
+  color: var(--secondary-color); /* --- MODIFIED --- */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .site-footer .footer-content.simple {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .site-footer .footer-social {
+    text-align: center;
+  }
+
+  .site-footer .social-icons a {
+    margin-right: 6px;
+  }
 }
 
 /* --- Responsive Adjustments --- */
