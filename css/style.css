@@ -452,7 +452,7 @@ button,
 #solution-side {
     opacity: 0;
     transform: translateX(30px);
-    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+    transition: opacity 0.8s ease-out 0.5s, transform 0.8s ease-out 0.5s;
 }
 
 .problem-reveal-section.is-revealed #problem-side {
@@ -654,31 +654,53 @@ button,
     -webkit-mask-image: linear-gradient(to right, transparent 0, black 5%, black 95%, transparent 100%);
     mask-image: linear-gradient(to right, transparent 0, black 5%, black 95%, transparent 100%);
     position: relative;
-    width: 100%;
+    
+    /* NEW: This creates the two-row layout */
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* NEW: Space between the two rows */
 }
 
 .carousel-track {
     display: flex;
-    width: calc(340px * 8);
+    /* UPDATED: 320px width + 40px margin = 360px per card */
+    width: calc(360px * 8); 
     animation: scroll 40s linear infinite;
+}
+
+/* NEW: Second track animation */
+.carousel-track-two {
+    animation: scroll-reverse 40s linear infinite;
 }
 
 .carousel-track:hover {
     animation-play-state: paused;
 }
 
+/* UPDATED: Keyframe for new card size */
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-340px * 4));
+        /* 4 original cards * 360px = 1440px */
+        transform: translateX(calc(-360px * 4));
+    }
+}
+
+/* NEW: Keyframe for reverse scrolling */
+@keyframes scroll-reverse {
+    0% {
+        transform: translateX(calc(-360px * 4));
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
 .testimonial-card {
     width: 320px;
-    margin-right: 20px;
+    margin-right: 40px; /* UPDATED: Increased spacing */
     flex-shrink: 0;
     background-color: white;
     border: 1px solid #E0E0E0;
