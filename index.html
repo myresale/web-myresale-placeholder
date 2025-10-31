@@ -7,18 +7,33 @@
   <title>MyResale: Satu link bisa untuk semua cerita preloved kamu</title>
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="shortcut" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="MyResale" />
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/fullpage-custom.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@600;700&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@600;700;800&display=swap">
 </head>
 
 <body>
-
+  <nav id="fp-nav">
+    <ul>
+      <li><a href="#home" data-tooltip="Home"><span></span></a></li>
+      <li><a href="#perbandingan" data-tooltip="Perbandingan"><span></span></a></li>
+      <li><a href="#masalah" data-tooltip="Masalah"><span></span></a></li>
+      <li><a href="#fitur" data-tooltip="Fitur"><span></span></a></li>
+      <li><a href="#testimoni" data-tooltip="Testimoni"><span></span></a></li>
+      <li><a href="#cara-kerja" data-tooltip="Cara Kerja"><span></span></a></li>
+      <li><a href="#faq" data-tooltip="FAQ"><span></span></a></li>
+      <li><a href="#gabung" data-tooltip="Gabung"><span></span></a></li>
+      <li><a href="#footer" data-tooltip="Footer"><span></span></a></li>
+    </ul>
+  </nav>
   <header class="site-header">
     <div class="header-content">
       <a href="/" title="MyResale Home">
@@ -28,48 +43,46 @@
         </picture>
       </a>
       <div class="auth-links">
-        <a href="https://formshare.ai/r/PesSF5uGsY" target="_blank" class="btn btn-primary">Gabung Sekarang!</a>
+        <a href="#gabung" class="btn btn-primary">Gabung Sekarang!</a>
       </div>
     </div>
   </header>
 
   <main>
 
-    <section class="hero-section"
+    <section id="home" class="hero-section"
       style="background-image: url('images/hero-store-front.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
       <div class="hero-content">
-        <span class="eyebrow">Bikin jualan preloved lebih cepat dan aman.</span>
-        <h1>MyResale, satu link bisa untuk semua cerita preloved kamu.</h1>
-        <p class="subheadline">Barang yang Sempat Kamu Sayang, Jangan Dibuang.</p>
-        <div class="hero-cta">
-          <a href="https://formshare.ai/r/PesSF5uGsY" target="_blank" class="btn btn-primary">Gabung Sekarang</a>
-          <a href="#how-it-works" class="btn btn-secondary-outline">Pelajari Selengkapnya</a>
+        <span class="eyebrow fp-anim">Bikin jualan preloved lebih cepat dan aman.</span>
+        <h1 class="fp-anim delay-1">MyResale, satu link bisa untuk semua cerita preloved kamu.</h1>
+        <p class="subheadline fp-anim delay-2">Barang yang Sempat Kamu Sayang, Jangan Dibuang.</p>
+        <div class="hero-cta fp-anim delay-3">
+          <a href="#gabung" class="btn btn-primary">Gabung Sekarang</a>
+          <a href="#cara-kerja" class="btn btn-secondary-outline">Pelajari Selengkapnya</a>
         </div>
-        <p class="notes">Sudah dipercaya oleh 10+ seller di Jabodetabek.</p>
+        <p class="notes fp-anim delay-4">Sudah dipercaya oleh 10+ seller di Jabodetabek.</p>
       </div>
     </section>
 
-    <section id="comparison" class="comparison-section section-padding">
+    <section id="perbandingan" class="comparison-section section-padding">
       <div class="container">
-        <h2 class="text-center">Kenapa Jualan Preloved Belum Semudah Itu?</h2>
-        <p class="text-center" style="max-width: 600px; margin: 0 auto 40px auto;">Platform lama dibuat untuk produk
+        <h2 class="text-center fp-anim">Kenapa Jualan Preloved Belum Semudah Itu?</h2>
+        <p class="text-center fp-anim delay-1" style="max-width: 600px; margin: 0 auto 40px auto;">Platform lama dibuat
+          untuk produk
           massal, bukan untuk barang unik titipan kamu.</p>
       </div>
-      <div class="comparison-header">
+      <div class="comparison-header fp-anim delay-2">
         <div class="compare-title-left">
           <h3>E-COMMERCE</h3>
         </div>
-
         <div class="compare-vs">
           <span>VS.</span>
         </div>
-
         <div class="compare-title-right">
           <h3>MYRESALE</h3>
         </div>
       </div>
-
-      <div class="comparison-grid">
+      <div class="comparison-grid fp-anim delay-3">
         <div class="comparison-row">
           <div class="compare-col compare-left">
             <p>Upload satu-satu, isi deskripsi panjang, atur stok kayak toko besar.</p>
@@ -81,7 +94,6 @@
             <p>Upload cepat dan fleksibel — cocok buat jualan preloved yang sering berubah.</p>
           </div>
         </div>
-
         <div class="comparison-row">
           <div class="compare-col compare-left">
             <p>Dibuat untuk brand & produk baru massal.</p>
@@ -93,7 +105,6 @@
             <p>Khusus untuk personal resale & titipan.</p>
           </div>
         </div>
-
         <div class="comparison-row">
           <div class="compare-col compare-left">
             <p>Gak ada fitur titipan, semua dianggap stok toko.</p>
@@ -105,7 +116,6 @@
             <p>Catat otomatis hasil & status barang penitip.</p>
           </div>
         </div>
-
         <div class="comparison-row">
           <div class="compare-col compare-left">
             <p>Banyak potongan & admin fee.</p>
@@ -117,7 +127,6 @@
             <p>Biaya rendah & transparan.</p>
           </div>
         </div>
-
         <div class="comparison-row">
           <div class="compare-col compare-left">
             <p>Formal dan transaksional.</p>
@@ -129,7 +138,6 @@
             <p>Personal & hangat, pembeli tahu cerita kurasimu.</p>
           </div>
         </div>
-
         <div class="comparison-row">
           <div class="compare-col compare-left">
             <p>Buyer ekspektasi barang baru.</p>
@@ -141,7 +149,6 @@
             <p>Komunitas preloved yang paham reuse.</p>
           </div>
         </div>
-
         <div class="comparison-row">
           <div class="compare-col compare-left">
             <p>Update manual tiap jualan.</p>
@@ -153,7 +160,6 @@
             <p>Update otomatis setelah barang terjual.</p>
           </div>
         </div>
-
         <div class="comparison-row">
           <div class="compare-col compare-left">
             <p>Gak bisa pisahin hasil pribadi & titipan.</p>
@@ -165,7 +171,6 @@
             <p>Laporan detail, transparan, bisa dikirim ke penitip.</p>
           </div>
         </div>
-
         <div class="comparison-row">
           <div class="compare-col compare-left">
             <p>Terlihat kaku & korporat.</p>
@@ -177,7 +182,6 @@
             <p>Hangat, estetik, manusiawi — seperti caramu jualan.</p>
           </div>
         </div>
-
         <div class="comparison-row">
           <div class="compare-col compare-left">
             <p>Gak ada ruang tumbuh bareng.</p>
@@ -189,11 +193,10 @@
             <p>Komunitas yang saling dukung antar penjual, pembeli, & penitip.</p>
           </div>
         </div>
-
       </div>
     </section>
 
-    <section id="problem" class="problem-reveal-section section-padding">
+    <section id="masalah" class="problem-reveal-section section-padding">
       <div class="container">
         <div class="problem-reveal-content">
 
@@ -201,7 +204,7 @@
             <img src="images/problem-illustration.webp" alt="Pusing rekap manual dan stok berantakan">
           </div>
 
-          <div class="text-col">
+          <div class="text-col fp-anim delay-1">
             <h2>Penjualanmu sekarang menjadi mudah</h2>
           </div>
 
@@ -213,28 +216,22 @@
       </div>
     </section>
 
-
-    <section id="features" class="features-section section-padding">
+    <section id="fitur" class="features-section section-padding">
       <div class="container">
-        <h2 class="text-center">Fitur yang Bikin Hidupmu Lebih Gampang</h2>
-
+        <h2 class="text-center fp-anim">Fitur yang Bikin Hidupmu Lebih Gampang</h2>
         <div class="features">
 
-          <!-- Feature 1: Biaya Platform Rendah -->
-          <div class="feature grid-col-4 grid-col-full-mobile">
-            <!-- This card holds the background image and overlay text -->
+          <div class="feature grid-col-4 grid-col-full-mobile fp-anim delay-1">
             <div class="feature-card" style="background-image: url('images/Biaya-Platform-Rendah.webp');">
               <p class="feature-text text-right">
                 Supaya jualan tetap untung, bukan buntung. Kamu bisa mengatur sendiri biaya yang kamu perlukan untuk
                 tokomu.
               </p>
             </div>
-            <!-- The title stays below the card -->
             <h4>Biaya Platform Rendah</h4>
           </div>
 
-          <!-- Feature 2: Nitipin Barang -->
-          <div class="feature grid-col-4 grid-col-full-mobile">
+          <div class="feature grid-col-4 grid-col-full-mobile fp-anim delay-2">
             <div class="feature-card" style="background-image: url('images/Nitipin-Barang-Tanpa-Ribet.webp');">
               <p class="feature-text text-left">
                 Semua tercatat otomatis dan penitip bisa pantau hasil jualannya kapan aja — tanpa drama, tanpa curiga.
@@ -243,8 +240,7 @@
             <h4>Nitipin Barang Tanpa Ribet!</h4>
           </div>
 
-          <!-- Feature 3: Upload Sekaligus -->
-          <div class="feature grid-col-4 grid-col-full-mobile">
+          <div class="feature grid-col-4 grid-col-full-mobile fp-anim delay-3">
             <div class="feature-card" style="background-image: url('images/Upload-Barang-Sekaligus.webp');">
               <p class="feature-text text-right">
                 Punya banyak barang dengan nama produk yang berbeda bukan lagi masalah, sini MyResale bantu!
@@ -257,12 +253,12 @@
       </div>
     </section>
 
-    <section id="testimonials" class="testimonial-section section-padding">
+    <section id="testimoni" class="testimonial-section section-padding">
       <div class="container text-center">
-        <h2>Apa Kata Para Seller?</h2>
+        <h2 class="fp-anim">Apa Kata Para Seller?</h2>
       </div>
-      <div class="testimonial-carousel">
-        <div class="carousel-track">
+      <div class="testimonial-carousel fp-anim delay-1">
+        <div class="carousel-track carousel-track-one">
           <div class="testimonial-card">
             <div class="quote-symbol">"</div>
             <p class="quote-text">"Proses jualnya enak, fiturnya nggak ribet. Aku paling suka bagian upload produk, ada
@@ -275,7 +271,6 @@
               </div>
             </div>
           </div>
-
           <div class="testimonial-card">
             <div class="quote-symbol">"</div>
             <p class="quote-text">"Aku bisa atur sendiri promo dan biaya platform, nggak kaku kayak marketplace besar.
@@ -288,7 +283,6 @@
               </div>
             </div>
           </div>
-
           <div class="testimonial-card">
             <div class="quote-symbol">"</div>
             <p class="quote-text">"Bagus nih fitur ini bisa meningkatkan daya saing karena pembeli yang paham pasar akan
@@ -302,7 +296,6 @@
               </div>
             </div>
           </div>
-
           <div class="testimonial-card">
             <div class="quote-symbol">"</div>
             <p class="quote-text">"Tampilannya bersih, nggak terlalu banyak elemen-elemen nggak penting, jadi lebih
@@ -316,8 +309,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Duplicate set -->
           <div class="testimonial-card">
             <div class="quote-symbol">"</div>
             <p class="quote-text">"Proses jualnya enak, fiturnya nggak ribet. Aku paling suka bagian upload produk, ada
@@ -330,7 +321,6 @@
               </div>
             </div>
           </div>
-
           <div class="testimonial-card">
             <div class="quote-symbol">"</div>
             <p class="quote-text">"Aku bisa atur sendiri promo dan biaya platform, nggak kaku kayak marketplace besar.
@@ -343,7 +333,6 @@
               </div>
             </div>
           </div>
-
           <div class="testimonial-card">
             <div class="quote-symbol">"</div>
             <p class="quote-text">"Bagus nih fitur ini bisa meningkatkan daya saing karena pembeli yang paham pasar akan
@@ -357,7 +346,109 @@
               </div>
             </div>
           </div>
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Tampilannya bersih, nggak terlalu banyak elemen-elemen nggak penting, jadi lebih
+              nyaman dipakai."</p>
+            <div class="user-info">
+              <img src="images/avatar-nabila.webp" alt="Nabila" class="avatar"
+                onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=Nabila';">
+              <div class="user-details">
+                <span class="user-name">Nabila</span>
+                <span class="user-handle">Preloved Buyer</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="carousel-track carousel-track-two">
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Proses jualnya enak, fiturnya nggak ribet. Aku paling suka bagian upload produk, ada
+              bantuan AI buat sortir foto, jadi hemat waktu banget."</p>
+            <div class="user-info">
+              <img src="images/natasya.webp" alt="Natasya" class="avatar">
+              <div class="user-details">
+                <span class="user-name">Natasya</span>
+                <span class="user-handle">Penjual Preloved di TikTok Live</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Aku bisa atur sendiri promo dan biaya platform, nggak kaku kayak marketplace besar.
+              Aku ngerasa dihargai sebagai penjual."</p>
+            <div class="user-info">
+              <img src="images/spreadthesweet.webp" alt="Spreadthesweet" class="avatar">
+              <div class="user-details">
+                <span class="user-name">Spreadthesweet</span>
+                <span class="user-handle">Penjual Parfum</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Bagus nih fitur ini bisa meningkatkan daya saing karena pembeli yang paham pasar akan
+              menggunakan fitur lelang."</p>
+            <div class="user-info">
+              <img src="images/avatar-abil.webp" alt="Abil" class="avatar"
+                onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=Abil';">
+              <div class="user-details">
+                <span class="user-name">Abil</span>
+                <span class="user-handle">Preloved Seller</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Tampilannya bersih, nggak terlalu banyak elemen-elemen nggak penting, jadi lebih
+              nyaman dipakai."</p>
+            <div class="user-info">
+              <img src="images/avatar-nabila.webp" alt="Nabila" class="avatar"
+                onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=Nabila';">
+              <div class="user-details">
+                <span class="user-name">Nabila</span>
+                <span class="user-handle">Preloved Buyer</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Proses jualnya enak, fiturnya nggak ribet. Aku paling suka bagian upload produk, ada
+              bantuan AI buat sortir foto, jadi hemat waktu banget."</p>
+            <div class="user-info">
+              <img src="images/natasya.webp" alt="Natasya" class="avatar">
+              <div class="user-details">
+                <span class="user-name">Natasya</span>
+                <span class="user-handle">Penjual Preloved di TikTok Live</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Aku bisa atur sendiri promo dan biaya platform, nggak kaku kayak marketplace besar.
+              Aku ngerasa dihargai sebagai penjual."</p>
+            <div class="user-info">
+              <img src="images/spreadthesweet.webp" alt="Spreadthesweet" class="avatar">
+              <div class="user-details">
+                <span class="user-name">Spreadthesweet</span>
+                <span class="user-handle">Penjual Parfum</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-symbol">"</div>
+            <p class="quote-text">"Bagus nih fitur ini bisa meningkatkan daya saing karena pembeli yang paham pasar akan
+              menggunakan fitur lelang."</p>
+            <div class="user-info">
+              <img src="images/avatar-abil.webp" alt="Abil" class="avatar"
+                onerror="this.onerror=null; this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=Abil';">
+              <div class="user-details">
+                <span class="user-name">Abil</span>
+                <span class="user-handle">Preloved Seller</span>
+              </div>
+            </div>
+          </div>
           <div class="testimonial-card">
             <div class="quote-symbol">"</div>
             <p class="quote-text">"Tampilannya bersih, nggak terlalu banyak elemen-elemen nggak penting, jadi lebih
@@ -375,148 +466,148 @@
       </div>
     </section>
 
-
-    <section id="how-it-works" class="how-it-works-section section-padding text-center">
+    <section id="cara-kerja" class="how-it-works-section section-padding text-center">
       <div class="container">
-        <h2>Cara Kerjanya</h2>
-        <div class="tabs">
+        <h2 class="fp-anim">Cara Kerjanya</h2>
+        <div class="tabs fp-anim delay-1">
           <div class="tab active" data-tab="seller">Untuk Penjual</div>
           <div class="tab" data-tab="buyer">Untuk Pembeli</div>
           <div class="tab" data-tab="consignor">Untuk Penitip</div>
         </div>
 
-        <!-- PENJUAL -->
-        <div class="steps seller-steps steps-content active" data-content="seller">
-          <div class="step grid-col-4 grid-col-full-mobile">
-            <img src="images/Upload-Barang-Cepat-Pakai-AI.webp" alt="Upload Barang Cepat Pakai AI"
-              class="step-image aspect-ratio-circle">
-            <h4>1. Upload Barang Cepat Pakai AI</h4>
-            <p>Cukup foto atau list produkmu, MyResale bantu isi otomatis. Nggak perlu input satu-satu lagi!</p>
+        <div class="steps-wrapper fp-anim delay-2">
+          <div class="steps seller-steps steps-content active" data-content="seller">
+            <div class="step grid-col-4 grid-col-full-mobile">
+              <img src="images/Upload-Barang-Cepat-Pakai-AI.webp" alt="Upload Barang Cepat Pakai AI"
+                class="step-image aspect-ratio-circle">
+              <h4>1. Buka Toko dan Mulai Upload Barangmu</h4>
+              <p>Buka tokomu di MyResale dan masukkan barang-barang preloved kesayanganmu.<br>Nggak perlu ribet — cukup
+                beberapa klik, semua barangmu langsung tampil rapi di etalase toko.</p>
+            </div>
+            <div class="step grid-col-4 grid-col-full-mobile">
+              <img src="images/Atur-Harga-Status-Sesukamu.webp" alt="Atur Harga & Status Sesukamu"
+                class="step-image aspect-ratio-circle">
+              <h4>2. Atur Harga & Status dengan Fleksibel</h4>
+              <p>Kamu bisa pilih mau jual barang pribadi atau titipan teman.<br>Atur sendiri harga, stok, dan status
+                barang sesuai kebutuhan — biar jualan terasa lebih bebas dan terkontrol.</p>
+            </div>
+            <div class="step grid-col-4 grid-col-full-mobile">
+              <img src="images/Lihat-Semua-Transaksi-di-Satu-Tempat.webp" alt="Lihat Semua Transaksi di Satu Tempat"
+                class="step-image aspect-ratio-circle">
+              <h4>3. Lihat Semua Transaksi di Satu Tempat</h4>
+              <p>Dari stok sampai hasil penjualan, semuanya otomatis tercatat di MyResale.<br>Kamu nggak perlu lagi
+                rekap manual atau buka banyak catatan — cukup buka dashboard, semuanya udah lengkap!</p>
+            </div>
           </div>
-          <div class="step grid-col-4 grid-col-full-mobile">
-            <img src="images/Atur-Harga-Status-Sesukamu.webp" alt="Atur Harga & Status Sesukamu"
-              class="step-image aspect-ratio-circle">
-            <h4>2. Atur Harga & Status Sesukamu</h4>
-            <p>Bisa pilih mana barang pribadi dan mana barang titipan teman. Fleksibel sesuai kebutuhanmu.</p>
-          </div>
-          <div class="step grid-col-4 grid-col-full-mobile">
-            <img src="images/Lihat-Semua-Transaksi-di-Satu-Tempat.webp" alt="Lihat Semua Transaksi di Satu Tempat"
-              class="step-image aspect-ratio-circle">
-            <h4>3. Lihat Semua Transaksi di Satu Tempat</h4>
-            <p>Dari stok sampai hasil penjualan, semua otomatis tercatat rapi di dashboard kamu.</p>
-          </div>
-        </div>
 
-        <!-- PEMBELI -->
-        <div class="steps buyer-steps steps-content" data-content="buyer" style="display: none;">
-          <div class="step grid-col-4 grid-col-full-mobile">
-            <img src="images/Pembeli-Jelajahi-Barang-Preloved.webp" alt="Jelajahi Barang Preloved"
-              class="step-image aspect-ratio-circle">
-            <h4>1. Jelajahi Barang Preloved</h4>
-            <p>Temukan barang-barang preloved dari seller terpercaya. Semua kurasi nyata, bukan stok pabrik.</p>
+          <div class="steps buyer-steps steps-content" data-content="buyer" style="display: none;">
+            <div class="step grid-col-4 grid-col-full-mobile">
+              <img src="images/Pembeli-Jelajahi-Barang-Preloved.webp" alt="Jelajahi Barang Preloved"
+                class="step-image aspect-ratio-circle">
+              <h4>1. Jelajahi Barang dari Penjual yang Kamu Percaya</h4>
+              <p>Kamu bisa lihat barang-barang yang dibagikan langsung sama dari link penjual.</p>
+            </div>
+            <div class="step grid-col-4 grid-col-full-mobile">
+              <img src="images/Pembeli-Checkout.webp" alt="Checkout dengan Aman" class="step-image aspect-ratio-circle">
+              <h4>2. Belanja Tenang, Semua Tercatat Otomatis</h4>
+              <p>Setiap pembelian kamu otomatis tercatat dan bisa dicek kapan aja.<br>Nggak perlu takut barang nggak
+                dikirim atau uang hilang — semuanya aman dan jelas dari awal.</p>
+            </div>
+            <div class="step grid-col-4 grid-col-full-mobile">
+              <img src="images/Pembeli-Dapat-Barang-Berkualitas.webp" alt="Dapat Barang Berkualitas"
+                class="step-image aspect-ratio-circle">
+              <h4>3. Dapat Barang yang Masih Bagus dan Punya Cerita</h4>
+              <p>Dapat Barang Berkualitas dengan Cerita. Karena preloved itu bukan bekas — tapi berharga.</p>
+            </div>
           </div>
-          <div class="step grid-col-4 grid-col-full-mobile">
-            <img src="images/Pembeli-Checkout.webp" alt="Checkout dengan Aman" class="step-image aspect-ratio-circle">
-            <h4>2. Checkout dengan Aman</h4>
-            <p>Transaksi tercatat otomatis dan bisa dilacak. Belanja nyaman tanpa was-was.</p>
-          </div>
-          <div class="step grid-col-4 grid-col-full-mobile">
-            <img src="images/Pembeli-Dapat-Barang-Berkualitas.webp" alt="Dapat Barang Berkualitas"
-              class="step-image aspect-ratio-circle">
-            <h4>3. Dapat Barang Berkualitas</h4>
-            <p>Karna preloved itu bukan bekas — tapi berharga. Nikmati barang berkualitas dengan cerita di baliknya.</p>
-          </div>
-        </div>
 
-        <!-- PENITIP -->
-        <div class="steps consignor-steps steps-content" data-content="consignor" style="display: none;">
-          <div class="step grid-col-4 grid-col-full-mobile">
-            <img src="images/Penitip-Titip-Barangmu-ke-Penjual.webp" alt="Titip Barangmu ke Penjual"
-              class="step-image aspect-ratio-circle">
-            <h4>1. Titip Barangmu ke Penjual</h4>
-            <p>Pilih penjual yang kamu percaya, lalu biarkan mereka input barangmu ke toko MyResale mereka.</p>
-          </div>
-          <div class="step grid-col-4 grid-col-full-mobile">
-            <img src="images/Penitip-Pantau-Penjualan-Real-Time.webp" alt="Pantau Penjualan Real-Time"
-              class="step-image aspect-ratio-circle">
-            <h4>2. Pantau Penjualan Real-Time</h4>
-            <p>Lihat langsung mana yang sudah laku dan berapa hasilnya — semua tanpa perlu tanya-tanya.</p>
-          </div>
-          <div class="step grid-col-4 grid-col-full-mobile">
-            <img src="images/Penitip-Terima-Laporan-Otomatis-Transparan.webp" alt="Terima Laporan Otomatis & Transparan"
-              class="step-image aspect-ratio-circle">
-            <h4>3. Terima Laporan Otomatis & Transparan</h4>
-            <p>Semua hasil penjualan tercatat di dashboard kamu secara otomatis. Jelas, jujur, tanpa drama.</p>
+          <div class="steps consignor-steps steps-content" data-content="consignor" style="display: none;">
+            <div class="step grid-col-4 grid-col-full-mobile">
+              <img src="images/Penitip-Titip-Barangmu-ke-Penjual.webp" alt="Titip Barangmu ke Penjual"
+                class="step-image aspect-ratio-circle">
+              <h4>1. Titipkan Barangmu ke Penjual Terpercaya</h4>
+              <p>Cukup pilih penjual yang kamu kenal atau percaya, lalu titipkan barangmu lewat MyResale.<br>Nanti
+                penjual bakal bantu unggah barangmu ke tokonya — kamu tinggal tunggu, nggak perlu ribet ngatur apa-apa.
+              </p>
+            </div>
+            <div class="step grid-col-4 grid-col-full-mobile">
+              <img src="images/Penitip-Pantau-Penjualan-Real-Time.webp" alt="Pantau Penjualan Real-Time"
+                class="step-image aspect-ratio-circle">
+              <h4>2. Pantau Penjualan Langsung dari Dashboard</h4>
+              <p>Begitu barangmu dijual, kamu bisa langsung lihat perkembangannya.<br>Barang mana yang sudah laku,
+                berapa hasilnya, semuanya bisa kamu pantau sendiri, kapan pun kamu mau.</p>
+            </div>
+            <div class="step grid-col-4 grid-col-full-mobile">
+              <img src="images/Penitip-Terima-Laporan-Otomatis-Transparan.webp"
+                alt="Terima Laporan Otomatis & Transparan" class="step-image aspect-ratio-circle">
+              <h4>3. Semua Tercatat Otomatis dan Transparan</h4>
+              <p>Nggak perlu nanya-nanya ke penjual satu-satu.<br>MyResale nyatet semuanya otomatis, dari status barang
+                sampai hasil jualan — biar kamu tenang dan nggak perlu curiga.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
 
     <section id="faq" class="faq-section section-padding">
       <div class="container">
-        <h2 class="text-center">Pertanyaan Umum (FAQ)</h2>
-        <div class="faq-list">
+        <h2 class="text-center fp-anim">Pertanyaan Umum (FAQ)</h2>
+        <div class="faq-list fp-anim delay-1">
           <details class="faq-item">
             <summary>MyResale itu apa sih?</summary>
-            <p>MyResale itu platform jual-beli barang preloved yang didesain khusus buat sistem titipan dan personal
-              resale. Jadi, kamu bisa jual barang sendiri atau titipan teman, sodara, siapapun deh! Kita bantu semuanya
-              agar rapi dan otomatis.</p>
+            <p>MyResale adalah tempat kamu jual beli bahkan titip barang bekas pakai yang layak dan masih bernilai.
+              Bedanya, sistemnya udah disiapin buat kamu yang jual sendiri atau nitipin ke orang lain. Jadi semuanya
+              tercatat otomatis, nggak ada lagi yang kelewat atau ribet ngitung manual.</p>
           </details>
           <details class="faq-item">
             <summary>MyResale itu untuk siapa?</summary>
-            <p>Buat kamu yang jualan preloved lewat IG, WhatsApp, atau TikTok – tapi pengen sistem yang lebih rapi. Buat
-              penitip juga, biar bisa mantau hasil jualannya sendiri. Buat pembeli yang suka barang bagus dengan cerita
-              di baliknya.</p>
+            <p>Cocok banget buat kamu yang biasa jualan lewat Instagram, WhatsApp, atau TikTok tapi pengin sistem yang
+              lebih rapi. Juga buat yang sering nitipin barang ke temen, biar bisa pantau hasilnya sendiri.</p>
           </details>
           <details class="faq-item">
             <summary>Kenapa harus pilih MyResale? Kan udah ada e-commerce yang lebih nyaman.</summary>
-            <p>Karena MyResale ngerti cara jualan kamu. E-commerce besar itu dibuat untuk brand dan toko, bukan untuk
-              jualan preloved yang sifatnya personal, cepat, dan berbasis kepercayaan. MyResale bantu kamu jual dan
-              titip dengan cara yang lebih kamu banget!</p>
+            <p>Karena MyResale ngerti cara jualan kamu. Kalau di platform besar semua terasa kayak toko besar dan ribet,
+              di sini kamu bisa jual dan nitip barang dengan cara yang lebih sederhana, cepat, dan tetap jujur. Biar
+              jualan tetap terasa personal tapi tetap kelihatan profesional.</p>
           </details>
           <details class="faq-item">
             <summary>Udah ada TikTok dan Instagram, kenapa harus pakai MyResale?</summary>
-            <p>TikTok dan Instagram bagus buat promosi, tapi gak buat rekap stok, titipan, atau hasil jualan. MyResale
-              hadir buat mengakomodasi itu semua, biar tercatat otomatis, gak perlu bingung lagi deh!</p>
+            <p>Instagram dan TikTok emang enak buat promosi, tapi nggak bisa bantu nyatet stok, titipan, atau hasil
+              jualan. MyResale bantu semua itu tercatat otomatis, jadi kamu tinggal fokus jualan dan ngurus pembeli aja.
+            </p>
           </details>
           <details class="faq-item">
             <summary>Barang apa aja yang bisa aku jual di sini?</summary>
-            <p>Semua barang preloved yang masih layak pakai dan punya cerita — mulai dari fashion, aksesoris, sampai
-              koleksi unik.</p>
+            <p>Apa aja boleh, asal masih bagus dan layak dipakai. Dari baju, tas, sepatu, sampai barang-barang koleksi
+              yang masih punya nilai dan cerita.</p>
           </details>
           <details class="faq-item">
             <summary>Duh, pasti mahal nih. Berapa biaya jualan di MyResale?</summary>
-            <p>Tenang, biaya platform MyResale itu rendah dan transparan. Gak ada biaya tersembunyi, gak ada potongan
-              aneh-aneh. Kamu bahkan bisa pilih sendiri biaya apa yang kamu perlukan untuk pengembangan tokomu loh!</p>
+            <p>Biayanya rendah dan jelas dari awal. Nggak ada potongan aneh atau biaya tambahan tiba-tiba. Kamu bisa
+              pilih paket sesuai kebutuhan dan kemampuan tokomu.</p>
           </details>
           <details class="faq-item">
             <summary>Cara biar pembeli tahu aku jualan di MyResale gimana?</summary>
-            <p>Kamu bisa bagikan link toko MyResale-mu langsung ke bio Instagram, WhatsApp, atau TikTok. Nanti pembeli
-              bisa lihat semua produkmu di satu tempat — tanpa DM panjang-panjang.</p>
+            <p>Tinggal bagiin link tokomu ke bio Instagram, WhatsApp, atau TikTok. Nanti pembeli bisa lihat semua
+              barangmu di satu halaman yang rapi dan gampang diakses.</p>
           </details>
           <details class="faq-item">
             <summary>Menarik banget! MyResale tersedia di wilayah mana aja?</summary>
-            <p>Saat ini MyResale bisa diakses di seluruh Indonesia. Selama ada internet, kamu bisa jualan dan nitip dari
-              mana aja!</p>
+            <p>Bisa banget! MyResale udah bisa diakses dari seluruh Indonesia. Jadi dari mana pun kamu jualan, sistemnya
+              tetap bisa bantu kamu ngatur, nitip, dan jual barang dengan gampang.</p>
           </details>
         </div>
       </div>
     </section>
 
-
-    <section id="join" class="join-section section-padding" style="background-image: url('images/conversion3.webp');">
-      <div class="container text-center">
-        <h2>Mudah banget kan jualan dengan MyResale?</h2>
-        <p>Gabung ke MyResale Sekarang!</p>
-        <a href="https://formshare.ai/r/PesSF5uGsY" target="_blank" class="btn btn-primary">Gabung Sekarang!</a>
-      </div>
+    <section id="gabung" class="join-section section-padding">
+      <iframe src="https://formshare.ai/r/PesSF5uGsY" referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
     </section>
-
 
   </main>
 
-  <footer class="site-footer">
+  <footer id="footer" class="site-footer">
     <div class="container">
       <div class="footer-content simple">
         <div class="footer-tagline">
@@ -534,7 +625,6 @@
             <a href="#" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
-
       </div>
       <div class="footer-bottom">
         <span>© 2025 MyResale</span>
@@ -544,8 +634,11 @@
     </div>
   </footer>
 
+  <script src="https://formshare.ai/embed/v1.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+
+      // --- This is your original, working tab script ---
       const tabs = document.querySelectorAll('.how-it-works-section .tab');
       const contents = document.querySelectorAll('.how-it-works-section .steps-content');
 
@@ -553,14 +646,12 @@
         tab.addEventListener('click', () => {
           const target = tab.getAttribute('data-tab');
 
-          // Update tab active state
           tabs.forEach(t => t.classList.remove('active'));
           tab.classList.add('active');
 
-          // Update content active state
           contents.forEach(content => {
             if (content.getAttribute('data-content') === target) {
-              content.style.display = 'flex'; // Or 'block' if 'flex' isn't desired
+              content.style.display = 'flex';
               content.classList.add('active');
             } else {
               content.style.display = 'none';
@@ -569,47 +660,77 @@
           });
         });
       });
-    });
-    // --- Delay Intersection Observer Setup until 0.5s after first scroll ---
-    let scrollTimer;
-    let observerInitialized = false;
 
-    window.addEventListener('scroll', () => {
-      // If already initialized, do nothing
-      if (observerInitialized) return;
+      // --- NEW Animation on Scroll (Intersection Observer) ---
+      // This replaces your old scroll-timer script
+      const animatedElements = document.querySelectorAll('.fp-anim');
 
-      // Clear any previous timer (if user scrolls again within 0.5s)
-      clearTimeout(scrollTimer);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Optional: only animate once
+          }
+        });
+      }, {
+        threshold: 0.1 // Trigger when 10% of the element is visible
+      });
 
-      // Set a new timer to initialize after 500ms of scroll activity
-      scrollTimer = setTimeout(() => {
-        initializeProblemReveal();
-        observerInitialized = true;
-      }, 500);
-    });
+      animatedElements.forEach(el => {
+        observer.observe(el);
+      });
 
-    function initializeProblemReveal() {
-      const problemSection = document.getElementById('problem');
-
+      // --- This is your original problem/solution script, now CSS-driven ---
+      // We can still use an observer for this specific interaction
+      const problemSection = document.getElementById('masalah'); // <-- THIS IS THE FIX
       if (problemSection) {
-        const revealCallback = (entries, observer) => {
+        const revealObserver = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               problemSection.classList.add('is-revealed');
-              observer.unobserve(entry.target);
+            } else {
+              problemSection.classList.remove('is-revealed'); // Reset when scrolling away
             }
           });
-        };
-
-        const revealObserver = new IntersectionObserver(revealCallback, {
-          root: null,
-          threshold: 0.5
+        }, {
+          threshold: 0.5 // Trigger when 50% is visible
         });
-
         revealObserver.observe(problemSection);
       }
-    }
+
+      // --- NEW: Side Navigation Dot Controller ---
+      const sections = document.querySelectorAll('main > section, .site-footer');
+      const navLinks = document.querySelectorAll('#fp-nav a');
+
+      const observerOptions = {
+        root: null, // observes intersections in the viewport
+        threshold: 0.5 // triggers when 50% of the section is visible
+      };
+
+      const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            const activeLink = document.querySelector(`#fp-nav a[href="#${id}"]`);
+
+            // Remove 'active' from all links
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Add 'active' to the link corresponding to the visible section
+            if (activeLink) {
+              activeLink.classList.add('active');
+            }
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections and the footer
+      sections.forEach(section => {
+        navObserver.observe(section);
+      });
+    });
   </script>
+
 </body>
 
 </html>
